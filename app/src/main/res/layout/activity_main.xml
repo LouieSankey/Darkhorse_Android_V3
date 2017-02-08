@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.darkhorse.louissankey.darkhorse.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primaryBackgroundColor"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    //the framelayout for the viewpager fragment
+    <FrameLayout
+        android:id="@+id/viewpager_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_below="@+id/toolbar">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottom_navigation_bar"
+        android:background="#ffffff"
+        android:layout_height="40dp">
+
+
+        <TextView
+            android:text="Deposit: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView"
+            android:id="@+id/textView2"
+            android:textColor="@color/primaryOrange"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="SkipToMyLou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_main_username"
+            android:textColor="@color/primaryBlue"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/add_user_black"
+            android:id="@+id/imageView2"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="$0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="17dp"
+            android:id="@+id/textView"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="17dp"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/activity_main_username"
+            android:layout_alignBottom="@+id/activity_main_username"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+ />
+
+
+
+
+</RelativeLayout>
