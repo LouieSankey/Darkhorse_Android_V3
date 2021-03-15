@@ -3,10 +3,10 @@ package com.darkhorse.louissankey.darkhorse;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements
         LiveContestsFragment.OnFragmentInteractionListener,
@@ -116,8 +114,8 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void openFragment(final Fragment fragment)   {
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
+        androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        androidx.fragment.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.viewpager_framelayout, fragment);
         transaction.addToBackStack(null);
         transaction.commit();

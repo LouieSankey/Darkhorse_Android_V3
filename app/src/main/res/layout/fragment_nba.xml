@@ -8,11 +8,14 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         app:srcCompat="@drawable/featured_roto"
         android:id="@+id/imageView"
         android:scaleType="fitXY"
         android:layout_height="150dp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
 </FrameLayout>
